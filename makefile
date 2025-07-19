@@ -1,9 +1,9 @@
-#CC=clang++
-CC=g++
-CFLAGS=-c -Wall
-LDFLAGS=
-SOURCES=main.cpp
-OBJECTS=$(SOURCES:.cpp=.o)
+#CC=clang
+CC=gcc
+CFLAGS=-c -Wall -std=c17
+LDFLAGS= -lpthread
+SOURCES=main.c
+OBJECTS=$(SOURCES:.c=.o)
 EXECUTABLE=main.out
 
 all: $(SOURCES) $(EXECUTABLE)
